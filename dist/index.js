@@ -8808,10 +8808,10 @@ const core = __nccwpck_require__(4118);
 const github = __nccwpck_require__(2831);
 
 webhook_url = core.getInput('webhook-url');
-msg = "New PR Event: ${process.env.GITHUB_EVENT} |";
-msg += " Repository: ${proces.env.GITHUB_REPOSITORY} |";
-msg += " Merge target: ${proces.env.GITHUB_BASE_REF} |";
-msg += " Branch to merge: ${process.env.GITHUB_HEAD_REF}";
+msg = `New PR Event: ${process.env.GITHUB_EVENT} |`;
+msg += ` Repository: ${process.env.GITHUB_REPOSITORY} |`;
+msg += ` Merge target: ${process.env.GITHUB_BASE_REF} |`;
+msg += ` Branch to merge: ${process.env.GITHUB_HEAD_REF}`;
 axios
  .post(webhook_url, {
      text: msg
