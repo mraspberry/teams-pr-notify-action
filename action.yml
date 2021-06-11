@@ -1,0 +1,12 @@
+name: 'Teams PR Notify'
+description: 'Post to a Teams Webhook when an event happens on macOS'
+inputs:
+  webhook-url:  # id of input
+    description: 'Teams Webhook URL'
+    required: true
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'node12'
+  main: 'index.js'
