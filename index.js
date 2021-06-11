@@ -5,6 +5,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 webhook_url = core.getInput('webhook-url');
+console.log(process.env);
 msg = `New PR Event: ${process.env.GITHUB_EVENT} |`;
 msg += ` Repository: ${process.env.GITHUB_REPOSITORY} |`;
 msg += ` Merge target: ${process.env.GITHUB_BASE_REF} |`;
