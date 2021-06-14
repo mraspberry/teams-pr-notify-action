@@ -7,4 +7,4 @@ WORKDIR /build
 
 RUN npm install && npm run build
 
-CMD ["node", "dist/index.js"]
+CMD ["node", "/build/dist/index.js"]
