@@ -3,8 +3,12 @@
 const axios = require('axios');
 const core = require('@actions/core');
 const github = require('@actions/github');
+const event_data = require(process.env.GITHUB_EVENT_PATH);
+
+console.log(event_data);
 
 webhook_url = core.getInput('webhook-url');
+console.log(`Webhook URL: ${webhook_url}`);
 console.log(process.env);
 msg = `New PR Event: ${process.env.GITHUB_EVENT} |`;
 msg += ` Repository: ${process.env.GITHUB_REPOSITORY} |`;
