@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 import * as ACData from 'adaptivecards-templating'
+const fs = require('fs')
 const axios = require('axios')
 const core = require('@actions/core')
 // Pull in the JSON file via require because it doesn't change
 // And needs to be a synchronous read
-const eventData = require(process.env.GITHUB_EVENT_PATH)
 
 const webhookUrl = core.getInput('webhook-url')
 console.log(`Webhook URL: ${webhookUrl}`)
@@ -13,6 +13,8 @@ console.log(`Webhook URL: ${webhookUrl}`)
 // msg += ` Repository: ${process.env.GITHUB_REPOSITORY} |`
 // msg += ` Merge target: ${process.env.GITHUB_BASE_REF} |`
 // msg += ` Branch to merge: ${process.env.GITHUB_HEAD_REF}`
+
+const eventData = fs.readFileSync(process.env.GITHUB_EVENT_PATH)
 
 /* eslint-disable no-template-curly-in-string */
 const templateData = {
