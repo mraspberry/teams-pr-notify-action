@@ -1,8 +1,9 @@
 FROM node:lts-alpine as builder
 
-WORKDIR /build
 
-COPY package*.json index.js LICENSE .
+COPY * /build/
+
+WORKDIR /build
 
 RUN npm install && npm run build
 
