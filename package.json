@@ -10,7 +10,9 @@
     "axios": "^0.21.1",
     "is-plain-object": "^5.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "standard": "^16.0.3"
+  },
   "scripts": {
     "build": "ncc build index.js --license LICENSE",
     "test": "echo \"Error: no test specified\" && exit 1"
