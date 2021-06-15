@@ -14,7 +14,7 @@ console.log(`Webhook URL: ${webhookUrl}`)
 // msg += ` Merge target: ${process.env.GITHUB_BASE_REF} |`
 // msg += ` Branch to merge: ${process.env.GITHUB_HEAD_REF}`
 
-const eventData = fs.readFileSync(process.env.GITHUB_EVENT_PATH)
+const eventData = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH))
 console.log(eventData)
 
 /* eslint-disable no-template-curly-in-string */
