@@ -1,0 +1,9 @@
+name: 'Teams PR Notify'
+description: 'Post to a Teams Webhook when an event happens on macOS'
+inputs:
+  webhook-url:  # id of input
+    description: 'Teams Webhook URL'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

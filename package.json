@@ -1,0 +1,32 @@
+{
+  "name": "teams-pr-notify-action",
+  "version": "0.0.5",
+  "description": "Notify of PR activity to a teams webhook",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "@actions/github": "^5.0.0",
+    "@vercel/ncc": "^0.28.6",
+    "adaptive-expressions": "^4.13.5",
+    "adaptivecards-templating": "^2.1.0",
+    "axios": "^0.21.1",
+    "is-plain-object": "^5.0.0"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  },
+  "scripts": {
+    "build": "ncc build index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mraspberry/teams-pr-notify-action.git"
+  },
+  "author": "Matthew Raspberry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mraspberry/teams-pr-notify-action/issues"
+  },
+  "homepage": "https://github.com/mraspberry/teams-pr-notify-action#readme"
+}
